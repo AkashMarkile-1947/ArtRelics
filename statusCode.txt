@@ -1,0 +1,32 @@
+HTTP status codes are three-digit numbers that provide information about the outcome of an HTTP request. They are grouped into five classes, each with a specific meaning:
+
+1. **Informational (1xx)**: These status codes indicate that the request has been received and understood but is still being processed.
+
+   - **100 Continue**: The server has received the initial part of the request and is waiting for the client to send the rest.
+
+2. **Successful (2xx)**: These status codes indicate that the request was successfully received, understood, and accepted.
+
+   - **200 OK**: The request was successful, and the server has returned the requested data.
+   - **201 Created**: The request has resulted in the creation of a new resource on the server.
+   - **204 No Content**: The request was successful, but there is no data to return (typically used for DELETE requests).
+
+3. **Redirection (3xx)**: These status codes indicate that the client needs to take further action to complete the request.
+
+   - **301 Moved Permanently**: The requested resource has been permanently moved to a different URL.
+   - **302 Found (or Temporary Redirect)**: The requested resource is temporarily located at a different URL.
+   - **304 Not Modified**: The client's cached copy of the resource is still valid, and there is no need to transfer the data again.
+
+4. **Client Error (4xx)**: These status codes indicate that there was an issue with the client's request.
+
+   - **400 Bad Request**: The request was malformed or contained invalid data.
+   - **401 Unauthorized**: Authentication is required, and the provided credentials are missing or invalid.
+   - **403 Forbidden**: The client is authenticated but does not have permission to access the requested resource.
+   - **404 Not Found**: The requested resource could not be found on the server.
+
+5. **Server Error (5xx)**: These status codes indicate that there was an issue on the server's side.
+
+   - **500 Internal Server Error**: A generic error message indicating that something went wrong on the server.
+   - **502 Bad Gateway**: The server, while acting as a gateway or proxy, received an invalid response from the upstream server.
+   - **503 Service Unavailable**: The server is currently unable to handle the request due to temporary overloading or maintenance.
+
+These are some of the most commonly used HTTP status codes for API requests. Depending on the specifics of your API and its functionality, you may encounter other status codes as well. When designing or consuming APIs, it's essential to understand these status codes to handle different scenarios gracefully.
