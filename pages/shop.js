@@ -55,8 +55,10 @@ export default function ProductList() {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {filteredProducts.map((product) => (
+        {filteredProducts.map((product, index) => (
+          <div key={index}>
           <ProductCard productName={product.productName} productMaterial={product.productMaterial} productCategory={product.productCategory} productPicture={product.productPicture} productPrice={product.productPrice} _id={product._id} />
+          </div>
         ))}
       </div>
 

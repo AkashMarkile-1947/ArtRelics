@@ -59,8 +59,9 @@ const Cart = () => {
 
   // Use useMemo to memoize the cartItems to improve performance
   const cartItems = useMemo(() => {
-    return cartList.map((item) => {
-      return <CartItem item={item} setCounter={setCounter} />;
+    return cartList.map((item, index) => {
+      console.log(index);
+      return <CartItem item={item} key={index} setCounter={setCounter} />;
     });
   }, [cartList]);
 

@@ -43,10 +43,10 @@ const CartItem = ({ item , setCounter}) => {
     // Implement your logic to handle the "Buy Now" option
     console.log(item)
   };
-
+  let key = 1;
   return (
     <div
-      key={item._id}
+      key={++key}
       className="border flex justify-between items-center p-4 rounded-lg bg-white mb-4"
     >
       <div>
